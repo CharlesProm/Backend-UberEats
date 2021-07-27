@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(require('./src/routes/index'))
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, function () {
 	console.log(`Escuchando en el puerto ${PORT}`);
 	console.log(`http://localhost:${PORT}`);
